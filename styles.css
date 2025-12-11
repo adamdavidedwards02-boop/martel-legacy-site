@@ -1,4 +1,4 @@
-:root {
+:root { 
   --color-primary: #1f4fbf;      /* Royal blue */
   --color-primary-soft: #315fd0;
   --color-charcoal: #222831;     /* Charcoal */
@@ -225,22 +225,6 @@ body {
   border-color: rgba(255, 255, 255, 0.7);
 }
 
-/* Hero tags */
-
-.hero-pill-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.pill {
-  font-size: 0.75rem;
-  padding: 0.35rem 0.75rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(7, 12, 25, 0.55);
-}
-
 /* Hero photo card */
 
 .hero-photo-card {
@@ -256,6 +240,7 @@ body {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.12);
   margin-bottom: 0.9rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
 }
 
 .hero-photo {
@@ -478,6 +463,79 @@ body {
   color: #7b83a0;
 }
 
+/* HERO IMAGE-FIRST LAYOUT – makes the image the main focus */
+
+.hero-image-dominant {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero-image-dominant .hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-photo-large {
+  max-width: 500px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.hero-photo-text-centered {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.hero-copy-centered {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-copy-centered h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-copy-centered .hero-subtitle {
+  max-width: 650px;
+  margin: 0.5rem auto 1.5rem auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.hero-cta-centered {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* HERO TAGS – FINAL VERSION, HIGH CONTRAST & BIGGER */
+
+.hero-pill-strip,
+.hero-pill-centered {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.pill {
+  background: #ffffff;              /* solid white */
+  color: #111827;                   /* very dark text */
+  padding: 12px 24px;               /* larger click/tap area */
+  font-size: 1.05rem;               /* bigger text */
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(15, 23, 42, 0.2);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  white-space: nowrap;              /* keeps each phrase on one pill */
+}
+
 /* Responsive */
 
 @media (max-width: 900px) {
@@ -521,6 +579,11 @@ body {
   .hero-photo-card {
     max-width: 360px;
   }
+
+  .hero-cta-centered {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 @media (max-width: 520px) {
@@ -532,85 +595,4 @@ body {
     flex-direction: column;
     align-items: stretch;
   }
-}
-/* HERO IMAGE-FIRST LAYOUT */
-.hero-image-dominant {
-  padding: 4rem 0;
-  text-align: center;
-}
-
-.hero-photo-large {
-  max-width: 500px;
-  margin: 0 auto 2.5rem auto;
-}
-
-.hero-photo-frame {
-  overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
-}
-
-.hero-photo {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.hero-photo-text-centered {
-  margin-top: 1rem;
-}
-
-.hero-copy-centered h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero-copy-centered .hero-subtitle {
-  max-width: 650px;
-  margin: 0.5rem auto 1.5rem auto;
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-.hero-cta-centered {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.hero-pill-centered {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.pill {
-  background: #f2f2f2;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-}
-/* Gold premium pill design */
-.hero-pill-centered,
-.hero-pill-strip {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 1rem;
-}
-
-.pill {
-  background: linear-gradient(135deg, #c9a44f, #a8832b, #d4b264);
-  color: #000;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 24px;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.22);
 }
