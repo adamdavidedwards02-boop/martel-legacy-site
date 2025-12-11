@@ -533,3 +533,63 @@ body {
     align-items: stretch;
   }
 }
+/* HERO IMAGE-FIRST LAYOUT */
+.hero-image-dominant {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero-photo-large {
+  max-width: 500px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.hero-photo-frame {
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+.hero-photo {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-photo-text-centered {
+  margin-top: 1rem;
+}
+
+.hero-copy-centered h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-copy-centered .hero-subtitle {
+  max-width: 650px;
+  margin: 0.5rem auto 1.5rem auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.hero-cta-centered {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-pill-centered {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pill {
+  background: #f2f2f2;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
